@@ -7,9 +7,20 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <h1>Forma</h1>
-    <input id="pole" class="text" type="text">
-    <button>Bum</button>
-    <a href="https://www.google.ru/">Ссылка</a>
+    <h1>Forma</h1> <!-- Дали название заголовку-->
+    <input id="pole" class="text" type="text"> <!-- Создали input типа текст с id "pole"| input - примерно "ввести"-->
+    <button>Bum</button> <!-- Создали и назвали кнопку-->
+    <a href="https://www.google.ru/">Ссылка</a> <!-- Разместили ссылку-->
 </body>
+<script> // добавлии блок с JS
+    const title = document.querySelector("h1"); // нашли через селектор заголовок 
+    console.log(title); 
+    const button = document.querySelector("button");
+    console.log(button);
+    const input = document.querySelector("#pole");
+    console.log(input);
+    button.addEventListener("click", function(){ // "как только сделаешь клик, воспроизведи вот эту функцию"
+        title.innerText = input.value; // заголовок меняется на значение, которое ввел пользователь
+    });
+</script>
 </html>
