@@ -1,0 +1,4 @@
+fetch("https://8mc9jttzol.execute-api.eu-west-1.amazonaws.com/dev/is_offer_running")
+  .then(response => response.json())
+  .then(result => console.log(result))
+

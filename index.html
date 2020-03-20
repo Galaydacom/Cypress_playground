@@ -11,6 +11,7 @@
     <input id="pole" class="text" type="text"> <!-- Создали input типа текст с id "pole"| input - примерно "ввести"-->
     <button>Bum</button> <!-- Создали и назвали кнопку-->
     <a href="https://www.google.ru/">Ссылка</a> <!-- Разместили ссылку-->
+    <div>Что угодно, пофигу</div>
 </body>
 <script> // добавлии блок с JS
     const title = document.querySelector("h1"); // нашли через селектор заголовок 
@@ -22,5 +23,12 @@
     button.addEventListener("click", function(){ // "как только сделаешь клик, воспроизведи вот эту функцию"
         title.innerText = input.value; // заголовок меняется на значение, которое ввел пользователь
     });
+    const div = document.querySelector("div");
+    fetch("https://8mc9jttzol.execute-api.eu-west-1.amazonaws.com/dev/is_offer_running")
+  .then(response => response.json())
+  .then(result => {
+      div.innerText = result.offerId;
+  })
+
 </script>
 </html>
